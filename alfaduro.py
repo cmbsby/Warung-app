@@ -14,7 +14,7 @@ db = mysql.connector.connect(
 )               
 
 dt = datetime.now(pytz.timezone('Asia/Jakarta'))
-timestamp = datetime.timestamp(dt,tzinfo=pytz.timezone(Etc/GMT+7))
+timestamp = datetime.timestamp(dt,tzinfo=pytz.timezone(st.secrets.time.time))
 date_time = datetime.fromtimestamp(timestamp)
 ts = date_time.strftime("%d-%m-%Y %H:%M:%S")
 
