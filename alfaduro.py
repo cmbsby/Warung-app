@@ -147,8 +147,8 @@ def penjualan():
         db.commit()
         cursor.execute("UPDATE sembako SET terjual=%s WHERE nama_barang=%s" , (update_penjualan,pilih_barang))
         db.commit()
-        sql = "INSERT INTO penjualan (timestamp, kode_barang, nama_barang, harga, qty, total_penjualan) VALUES (CURRENT_TIMESTAMP(),%s,%s,%s,%s,%s)"
-        val = (kdb,pilih_barang,harga,qty,totaljual)
+        sql = "INSERT INTO penjualan (timestamp, kode_barang, nama_barang, harga, qty, total_penjualan) VALUES (%s,%s,%s,%s,%s,%s)"
+        val = (ts,kdb,pilih_barang,harga,qty,totaljual)
         cursor.execute(sql,val)
         db.commit()
 
