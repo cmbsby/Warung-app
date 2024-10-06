@@ -157,7 +157,7 @@ def penjualan():
             st.rerun()
 
 def laporan_penjualan():
-    st.title(":green[DATA PENJUALAN WARUNG GAWON]")
+    st.title(":red[DATA PENJUALAN WARUNG GAWON]")
     cursor = db.cursor()
     cursor.execute("SELECT * FROM penjualan")
     liat = cursor.fetchall()
