@@ -116,7 +116,7 @@ def penjualan():
     intip = cursor.fetchall()
     daftar_barang = [row[0] for row in intip]
     
-    pilih_barang = st.selectbox("Cari Barang",daftar_barang)
+    pilih_barang = st.selectbox("Cari barang untuk dibeli",daftar_barang)
     
     cursor.execute("SELECT * FROM sembako WHERE nama_barang=%s" , (pilih_barang,)) #cek stock
     cek = cursor.fetchall() 
