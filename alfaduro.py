@@ -154,7 +154,7 @@ def penjualan():
         db.commit()
 
         if cursor.rowcount > 0:
-            st.success("Fungsi penjualan berhasil")
+            st.success("Barang berhasil di check out!")
             time.sleep(0.3)
             st.rerun()
 
