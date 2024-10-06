@@ -109,6 +109,7 @@ def lihat_stock():
 
 
 def penjualan():
+    st.title(":blue[WARUNG GAWON] 🐶")
     cursor = db.cursor()
     
     cursor.execute("SELECT nama_barang FROM sembako")
