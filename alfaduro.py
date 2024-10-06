@@ -1,6 +1,7 @@
 import mysql.connector
 import streamlit as st
 import time
+import pytz
 from datetime import datetime
 import pandas as pd
 
@@ -12,7 +13,7 @@ db = mysql.connector.connect(
     database = st.secrets.mysql.database
 )               
 
-dt = datetime.now()
+dt = datetime.now(pytz.timezone('Asia/Jakarta'))
 timestamp = datetime.timestamp(dt)
 date_time = datetime.fromtimestamp(timestamp)
 ts = date_time.strftime("%d-%m-%Y %H:%M:%S")
