@@ -141,7 +141,7 @@ def penjualan():
     update_penjualan = terjual + qty
     totaljual = harga * qty
     
-    if st.button("Submit"):
+    if st.button("Check Out"):
         sql = "UPDATE sembako SET stock=%s WHERE nama_barang=%s"
         val = (penjualan, pilih_barang)
         cursor.execute(sql,val)
