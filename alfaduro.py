@@ -18,12 +18,15 @@ fmt = '%Y-%m-%d %H:%M:%S %Z%z'
 # Jakarta Standard Time
 tz_jkt = pytz.timezone('Asia/Jakarta')
 ist_local = tz_jkt.localize(datetime.now())
-ts = ist_local.strftime(fmt)
+ts2 = ist_local.strftime(fmt)
 
 dt = datetime.now(pytz.timezone('Asia/Jakarta'))
 timestamp = datetime.timestamp(dt)
 date_time = datetime.fromtimestamp(timestamp)
 ts1 = date_time.strftime("%d-%m-%Y %H:%M:%S")
+
+dt_ind = dt_us_eastern.astimezone(pytz.timezone('Asia/Kolkata'))
+ts = dt_ind.strftime("%Y:%m:%d %H:%M:%S %Z %z"))
 
 def lihat_stock():
     st.title(":blue[DATA GUDANG WARUNG GAWON]")
