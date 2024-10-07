@@ -20,7 +20,7 @@ tz_jkt = pytz.timezone('Asia/Jakarta')
 ist_local = tz_jkt.localize(datetime.now())
 ts2 = ist_local.strftime(fmt)
 
-dt = datetime.now(pytz.timezone('Asia/Jakarta'))
+dt = datetime.now()
 timestamp = datetime.timestamp(dt)
 date_time = datetime.fromtimestamp(timestamp)
 ts1 = date_time.strftime("%d-%m-%Y %H:%M:%S")
