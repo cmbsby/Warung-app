@@ -13,10 +13,17 @@ db = mysql.connector.connect(
     database = st.secrets.mysql.database
 )               
 
+fmt = '%Y-%m-%d %H:%M:%S %Z%z'
+
+# Jakarta Standard Time
+tz_jkt = pytz.timezone('Asia/Jakarta')
+ist_local = tz_jkt.localize(datetime.now())
+ts = ist_local.strftime(fmt)
+
 dt = datetime.now(pytz.timezone('Asia/Jakarta'))
 timestamp = datetime.timestamp(dt)
 date_time = datetime.fromtimestamp(timestamp)
-ts = date_time.strftime("%d-%m-%Y %H:%M:%S")
+ts1 = date_time.strftime("%d-%m-%Y %H:%M:%S")
 
 def lihat_stock():
     st.title(":blue[DATA GUDANG WARUNG GAWON]")
