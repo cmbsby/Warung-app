@@ -26,7 +26,7 @@ date_time = datetime.fromtimestamp(timestamp)
 ts1 = date_time.strftime("%d-%m-%Y %H:%M:%S")
 
 dt_ind = dt_us_eastern.astimezone(pytz.timezone('Asia/Kolkata'))
-ts = dt_ind.strftime("%Y:%m:%d %H:%M:%S %Z %z"))
+ts = dt_ind.strftime("%Y:%m:%d %H:%M:%S %Z %z")
 
 def lihat_stock():
     st.title(":blue[DATA GUDANG WARUNG GAWON]")
